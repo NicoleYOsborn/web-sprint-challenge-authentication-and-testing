@@ -3,6 +3,13 @@
   before granting access to the next middleware/route handler
 */
 
+
 module.exports = (req, res, next) => {
-  res.status(401).json({ you: 'shall not pass!' });
+  console.log(req.session);
+  if(req.session && req.session.user) {
+    next();
+  } else {
+    res.status(400).json({message: 'Please enter valid credentials'})
+  }
+  
 };
