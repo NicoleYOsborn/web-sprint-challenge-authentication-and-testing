@@ -1,4 +1,4 @@
-const hashedPassword = "$2a14$qHqCbXUImiB0gXlFNX47wuA7uFWNGNAZutYLvOeye9eotewGlfYV6"
+const hashedPassword = "$2a$10$ZAc7lkGAHYJbH.Lu0BRxwuLtVD1Jutcdh8F/SSMz7paE4X2sfpqwG"
 //pre-hashed password 'abc12345'
 exports.seed = async function(knex) {
   // Deletes ALL existing entries
