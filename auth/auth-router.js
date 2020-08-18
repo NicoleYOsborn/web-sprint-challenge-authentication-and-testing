@@ -5,7 +5,10 @@ const Users = require('../users/users-model')
 
 router.post('/register', (req, res) => {
   let user = req.body;
-
+  
+  if (!user.username || !user.password){
+    res.status(400).json({message: "Username and password are required"})
+  }
     const hash = bcrypt.hashSync(user.password, 10);
     user.password = hash;
     Users.add(user)

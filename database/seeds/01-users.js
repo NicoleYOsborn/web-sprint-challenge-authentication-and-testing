@@ -3,7 +3,7 @@ const hashedPassword = "$2a14$qHqCbXUImiB0gXlFNX47wuA7uFWNGNAZutYLvOeye9eotewGlf
 exports.seed = async function(knex) {
   // Deletes ALL existing entries
   await knex('users').insert([
-    {id: 1, username: "janedoe", password: hashedPassword, department: "development" }, 
-    {id: 2, username: "johndoe", password: hashedPassword, department: "marketing" }
+    {id: 1, username: "janedoe", password: hashedPassword}, 
+    {id: 2, username: "johndoe", password: hashedPassword}
   ])
 };

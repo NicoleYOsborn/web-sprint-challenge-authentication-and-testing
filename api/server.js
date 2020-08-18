@@ -29,5 +29,5 @@ server.use(session(sessionConfig))
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
-module.exports = server;
+module.exports = server; 
 
